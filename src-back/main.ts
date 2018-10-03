@@ -3,6 +3,9 @@ import serve from 'koa-static';
 const app = new Koa();
 const PORT = process.env.PORT || 3000;
 
+console.log("Starting Application");
+console.log("Running on port "+PORT);
+
 // logger
 app.use(async (ctx, next) => {
     await next();
@@ -21,5 +24,4 @@ app.use(async (ctx, next) => {
 
 // response
 app.use(serve('wwwroot'));
-console.log("Running on port "+PORT);
 app.listen(PORT);

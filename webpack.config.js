@@ -9,7 +9,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const extractCSS = new ExtractTextPlugin("vendor.css");
-const bundleOutputDir = "./wwwroot/dist";
+const bundleOutputDir = "./app/dist";
 
 module.exports = (env, argv) => {
   const isDevBuild = !(env && env.prod);
