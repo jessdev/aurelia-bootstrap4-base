@@ -23,5 +23,5 @@ app.use(async (ctx, next) => {
 });
 
 // response
-app.use(serve('wwwroot'));
+app.use(serve('app'));
 app.listen(PORT);
