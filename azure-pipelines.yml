@@ -10,8 +10,8 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.2.1'
-
   displayName: 'Install Node.js'
+
 - task: Npm@1
   displayName: 'npm install'
   inputs:
@@ -24,23 +24,23 @@ steps:
     verbose: true
     customCommand: 'run build-prod'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.BinariesDirectory)'
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: dist/*
-    TargetFolder: '$(Build.BinariesDirectory)'
-    CleanTargetFolder: true
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy Files to: $(Build.BinariesDirectory)'
+#   inputs:
+#     SourceFolder: '$(System.DefaultWorkingDirectory)'
+#     Contents: dist/*
+#     TargetFolder: '$(Build.BinariesDirectory)'
+#     CleanTargetFolder: true
+#     OverWrite: true
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.BinariesDirectory)'
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/app'
-    Contents: '**'
-    TargetFolder: '$(Build.BinariesDirectory)/app'
-    CleanTargetFolder: true
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy Files to: $(Build.BinariesDirectory)'
+#   inputs:
+#     SourceFolder: '$(System.DefaultWorkingDirectory)/app'
+#     Contents: '**'
+#     TargetFolder: '$(Build.BinariesDirectory)/app'
+#     CleanTargetFolder: true
+#     OverWrite: true
 
 # - task: CopyFiles@2
 #   displayName: 'Copy Files to: $(Build.BinariesDirectory)'
@@ -54,7 +54,7 @@ steps:
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
