@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import serve from 'koa-static';
 const app = new Koa();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 
 console.log("Starting Application");
 console.log("Running on port "+PORT);
