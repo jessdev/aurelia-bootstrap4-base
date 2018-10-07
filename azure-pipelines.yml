@@ -42,14 +42,14 @@ steps:
     CleanTargetFolder: true
     OverWrite: true
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.BinariesDirectory)'
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/node_modules/'
-    Contents: '**'
-    TargetFolder: '$(Build.BinariesDirectory)/node_modules'
-    CleanTargetFolder: true
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy Files to: $(Build.BinariesDirectory)'
+#   inputs:
+#     SourceFolder: '$(System.DefaultWorkingDirectory)/node_modules/'
+#     Contents: '**'
+#     TargetFolder: '$(Build.BinariesDirectory)/node_modules'
+#     CleanTargetFolder: true
+#     OverWrite: true
 
 - task: ArchiveFiles@2
   displayName: 'Archive files'
