@@ -13,7 +13,8 @@ export class App {
     //   { route: 'child-router',  name: 'child-router', moduleId: PLATFORM.moduleName('./child-router'), nav: true, title: 'Child Router' },
     // ]);
     config.map([
-      { route: ['', 'home'], name: 'home',moduleId: PLATFORM.moduleName('./routes/home'), nav: true, title: 'Home' }
+      { route: ['', 'home'], name: 'home',moduleId: PLATFORM.moduleName('./routes/home'), nav: true, title: 'Home' },
+      { route: ['about'], name: 'about',moduleId: PLATFORM.moduleName('./routes/about'), nav: true, title: 'About' }
     ]);
 
     this.router = router;
