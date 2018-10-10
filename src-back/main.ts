@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 
 console.log("Starting Application");
 console.log("Running on port "+PORT);
-console.log(process);
+console.log(__dirname);
 
 // logger
 app.use(async (ctx, next) => {
@@ -24,5 +24,5 @@ app.use(async (ctx, next) => {
 });
 
 // response
-app.use(serve('app'));
+app.use(serve(__dirname+'/../app'));
 app.listen(PORT);
