@@ -4,9 +4,14 @@ import {PLATFORM} from 'aurelia-pal';
 
 export class App {
   router: Router | undefined;
+  title: string;
+
+  constructor(){
+    this.title = "Website1";
+  }
 
   configureRouter(config: RouterConfiguration, router: Router) {
-    config.title = 'Aurelia';
+    config.title = this.title;
     // config.map([
     //   { route: ['', 'welcome'], name: 'welcome',      moduleId: PLATFORM.moduleName('./welcome'),      nav: true, title: 'Welcome' },
     //   { route: 'users',         name: 'users',        moduleId: PLATFORM.moduleName('./users'),        nav: true, title: 'Github Users' },
