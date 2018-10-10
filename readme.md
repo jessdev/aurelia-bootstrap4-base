@@ -1,9 +1,9 @@
 # Example Aurelia/bootstrap4
-This example is built off of the Cover Letter example created by the Bootrap Team. 
-If you like this example and css, please check out [their other examples.](https://getbootstrap.com/docs/4.0/examples/)
+This example is built off of the [Creative](https://startbootstrap.com/template-overviews/creative/) example created by Start Bootstrap.
+If you like this example and css, please check out [their other examples.](https://startbootstrap.com/template-overviews/)
 ## Build
 The application uses aurelia as a front end template with koa serving static files.
-To quickly build the application, use `npm run run`. This will server the application on port 3000.
+To quickly build the application, use `npm run run`. This will server the application on port 8080.
 
 There are two components to building the application:
 1. Transpiling the back-end Typescript.
